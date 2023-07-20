@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Game</title>
+  <link rel="stylesheet" href="football.css">
+  <link rel="icon" href="f2.png" type="image/x-icon">
+  <script>
+  function showSoccerField() {
+  document.getElementById("soccer-field").style.display = "block";
+  showScoreBox(); // Call the showScoreBox() function to display the score box
+  }
+  function showScoreBox() {
+    var scoreBox = document.getElementById("score-text");
+    scoreBox.style.display = "block";
+  }
+  </script>
+</head>
+<body>
+  <button class="start-button" onclick="showSoccerField()">START    
+    GAME
+  </button>
+  <div class="score-box" id="score-text">
+    SCORE : GS 1 | FB 1
+  </div>
+  <div class="container" id="soccer-field">
+    <div class="line"></div>
+    <div class="half"></div>
+    <div class="penalty left"></div>
+    <div class="penalty right"></div>
+    <div class="goal left"></div>
+    <div class="goal right"></div>
+    <div class="p-spot left">&nbsp;</div>
+    <div class="p-spot right">&nbsp;</div>
+    <div class="center"></div>
+    <div class="p-place left"></div>
+    <div class="p-place right"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+body {
+  background-color: rgba(29, 35, 27, 0.373);
+}
+.container {
+  display: flex;
+  width:1003px;
+  height: 536px ;
+  margin: 80px auto;
+  background-color: green;
+  border-radius: 7px;
+  position: relative;
+  cursor: pointer;
+}
+.container .line {
+  width:1000px;
+  height: 533px ;
+  border-style:solid;
+  border-radius: 8px;
+  border-color: white;
+  position:absolute;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+}
+.container .line::before {
+  border:8px green;
+  border-style: solid;
+  border-radius: 8px;
+  bottom: -20px;
+  content: "";
+  left: -20px;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+.container .half {
+  width: 500px;
+  height: 536px ;
+  position:absolute;
+  top: 0px;
+  border-right-color: white;
+  border-right-style: solid;
+  border-right-width: 4px;
+  left: 0px;
+  z-index:200;
+}
+.container .penalty {
+  width:110px;
+  height:220px;
+  border:3px solid #ffffff;
+  position:absolute;
+  z-index:220;
+  background-color:#539A46;
+}
+.container .penalty.left{
+  left: 2px;
+  top: 150px;
+  border-left-color: transparent;
+  border-left-width: 0px;
+}
+.container .penalty.left::after {
+  border: 3px solid #ffffff;
+  border-left-color: transparent;
+  border-left-width: 0px;
+  bottom: 45px;
+  content: "";
+  left: 0px;
+  position: absolute;
+  right: 55px;
+  top: 45px;
+}
+.container .penalty.right{
+  right: 0px;
+  top: 150px;
+  border-right-color: transparent;
+  border-right-width: 0px;
+}
+.container .penalty.right::after {
+  border:3px solid #ffffff;
+  border-right-color:transparent;
+  border-right-width:0px;
+  bottom: 45px;
+  content: "";
+  left: 55px;
+  position: absolute;
+  right: 0px;
+  top: 45px;
+}
+.container .goal {
+  width:30px;
+  height:70px;
+  border:1px solid #ffffff;
+  border-style: dashed;
+  position:absolute;
+  z-index:350;
+  background-color:#b5d7b0;
+}
+.container .goal.left{
+  left: -10px;
+  top: 225px;
+  border-left-color: transparent;
+  border-left-width: 0px;
+}
+.container .goal.left::after{
+  bottom: 45px;
+  content: "";
+  position: absolute;
+  right: 55px;
+  top: 45px;
+}
+.container .goal.right {
+  right: -13px;
+  top: 225px;
+  border-right-color: transparent;
+  border-right-width: 0px;
+}
+.container .goal.right::after{
+  bottom: 45px;
+  content: "";
+  position: absolute;
+  right: 55px;
+  top: 45px;
+}
+.container .p-spot.left::after {
+  content:"\2022";
+  position:absolute;
+  color:#fff;
+  font-size:35px;
+  top:245px;
+  left:80px;
+  z-index: 300;
+  text-shadow:0px 0px 15px  #ffffff;
+}
+.container .p-spot.right::after {
+  content:"\2022";
+  position:absolute;
+  color:#fff;
+  font-size:35px;
+  top:245px;
+  right:80px;
+  z-index: 300;
+  text-shadow:0px 0px 15px  #ffffff; 
+}
+.container .center {
+  position:absolute;
+  width: 130px;
+  height: 130px;
+  border: 3px solid;
+  border-color: white;
+  left: 434px;
+  top: 193px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px #ffffff90;
+}
+.container .center::after {
+  background-color: white;
+  box-shadow: 0px 0px 15px #ffffff90;
+  border: 2px;
+  border-color: #36882a;
+  border-style: solid;
+  bottom: 50px;
+  content: "";
+  left: 50px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  border-radius: 50%;
+}
+.container .p-place {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;	
+  height: 130px;
+  position: absolute;
+  width: 150px;
+  z-index: 210;
+  border:3px solid transparent;
+}
+.container .p-place.left {
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-top-color: #fff;
+  left: 0;
+  top: 200px;
+}
+.container .p-place.right {
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+  border-top-color: #fff;
+  right: 0px;
+  top: 200px;
+}
+.start-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  font-size: 32px;
+  font-family: Roboto Arial;
+  background-color: #4f9a42;
+  border-style: dashed;
+  border-color: rgb(48, 72, 5);
+  border-width: 3px;
+  border-radius: 50px;
+  color: white;
+  cursor:pointer;
+  transition: opacity 0.15s;
+  vertical-align: top;
+  text-shadow:2px 2px 20px #ffffff; 
+}
+.start-button:hover {
+  opacity: 0.8;
+}
+.start-button:active {
+  opacity: 0.4;
+}
+#soccer-field {
+  display: none;
+}
+.score-box{
+  top: 13px;
+  position: relative;
+  padding: 26px 26px;
+  background-color: #2e373170;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: rgba(37, 46, 38, 0.962);
+  border-radius: 10px;
+  box-shadow: inset 7px  5px 5px rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+#score-box {
+  display:none;
+}
+#score-text {
+  display:none;
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-weight: 700;
+  font-family: Roboto Arial;
+  text-align: center;
+  text-shadow:2px 2px 20px #eeeeee;
+}
