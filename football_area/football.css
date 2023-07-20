@@ -219,6 +219,9 @@ body {
 #soccer-field {
   display: none;
 }
+#start-button {
+  
+}
 .score-box{
   top: 13px;
   position: relative;
