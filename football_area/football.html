@@ -10,7 +10,9 @@
   function showSoccerField() {
   document.getElementById("soccer-field").style.display = "block";
   showScoreBox(); // Call the showScoreBox() function to display the score box
-  }
+  // Hide the start button after it is clicked
+  document.getElementById("start-button").style.display = "none";
+}
   function showScoreBox() {
     var scoreBox = document.getElementById("score-text");
     scoreBox.style.display = "block";
@@ -18,7 +20,8 @@
   </script>
 </head>
 <body>
-  <button class="start-button" onclick="showSoccerField()">START    
+  <!-- Add an id attribute to the start button element -->
+  <button id="start-button" class="start-button" onclick="showSoccerField()">START    
     GAME
   </button>
   <div class="score-box" id="score-text">
